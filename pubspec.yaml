@@ -1,5 +1,5 @@
 name: looking_2
-description: "AI-powered item tracker application."
+description: "Item tracker app for recording where things are stored."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -11,13 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.8
-
   # State Management
   flutter_riverpod: ^2.5.0
-
-  # Routing
-  go_router: ^14.0.0
 
   # Database
   sqflite: ^2.3.0
@@ -28,7 +23,6 @@ dependencies:
 
   # Camera & Image
   image_picker: ^1.0.7
-  cached_network_image: ^3.3.1
   video_player: ^2.8.0
 
   # Permissions
@@ -36,13 +30,10 @@ dependencies:
 
   # Storage
   flutter_secure_storage: ^9.1.0
-  path_provider: ^2.1.2
 
   # JSON Serialization
   json_annotation: ^4.9.0
 
-  # Functional Programming
-  dartz: ^0.10.1
   video_thumbnail: ^0.5.6
 
 dev_dependencies:

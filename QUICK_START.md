@@ -12,7 +12,7 @@
 
 ## 2. 准备 API Key
 
-应用不会内置 AI 服务密钥，首次使用前需要自行准备 DashScope API Key：
+应用不会内置识别服务密钥，首次使用前需要自行准备 DashScope API Key：
 
 1. 打开 [https://dashscope.console.aliyun.com/](https://dashscope.console.aliyun.com/)
 2. 创建 API Key

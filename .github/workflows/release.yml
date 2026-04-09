@@ -60,17 +60,23 @@ jobs:
           files: build/app/outputs/flutter-apk/app-release.apk
           generate_release_notes: true
           body: |
-            ## 下载方式
+            ## 这是什么
+
+            这是一个用于记录物品和存放位置的 Android 应用，支持通过拍照、相册图片或相册视频辅助回忆。
+
+            ## 下载与安装
 
             - 直接下载下方附带的 `app-release.apk`
-            - 首次使用前，请在应用设置页配置自己的 DashScope API Key
+            - 安装前如遇系统提示，请先允许安装未知来源应用
 
-            ## 使用说明
+            ## 第一次使用
 
-            - 快速开始：`QUICK_START.md`
-            - 详细说明：`USER_GUIDE.md`
+            - 打开应用后先进入设置页
+            - 填入你自己的 DashScope API Key
+            - 返回首页后即可开始录入和搜索物品
 
             ## 说明
 
             - 当前重点支持 Android
-            - 识别时需要联网访问 DashScope API
+            - 识别功能需要联网访问 DashScope API
+            - 更详细的使用说明见 `QUICK_START.md` 和 `USER_GUIDE.md`
