@@ -5,9 +5,10 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
 
     <application
-        android:label="looking_2"
+        android:label="物品追踪器"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

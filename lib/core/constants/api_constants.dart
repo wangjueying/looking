@@ -1,12 +1,21 @@
 class ApiConstants {
-  static const String baseUrl = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation';
+  // API基础URL
+  static const String aiApiBaseUrl = 'https://dashscope.aliyuncs.com';
 
-  static const String model = 'qwen-vl-max';
+  // 通义千问API端点
+  static const String multimodalGeneration =
+      '/api/v1/services/aigc/multimodal-generation/generation';
 
-  static const Map<String, String> headers = {
-    'Content-Type': 'application/json',
-  };
+  // 请求头
+  static const String contentType = 'application/json';
+  static const String authorizationHeader = 'Authorization';
 
-  static const int connectTimeout = 30000; // 30 seconds
-  static const int receiveTimeout = 30000; // 30 seconds
+  // 超时配置
+  static const Duration connectionTimeout = Duration(seconds: 30);
+  static const Duration receiveTimeout = Duration(seconds: 60);
+  static const Duration sendTimeout = Duration(seconds: 30);
+
+  // 重试配置
+  static const int maxRetries = 3;
+  static const Duration retryDelay = Duration(seconds: 2);
 }

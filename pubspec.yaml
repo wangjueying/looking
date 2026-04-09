@@ -29,6 +29,7 @@ dependencies:
   # Camera & Image
   image_picker: ^1.0.7
   cached_network_image: ^3.3.1
+  video_player: ^2.8.0
 
   # Permissions
   permission_handler: ^11.2.0
@@ -42,6 +43,7 @@ dependencies:
 
   # Functional Programming
   dartz: ^0.10.1
+  video_thumbnail: ^0.5.6
 
 dev_dependencies:
   flutter_test:
