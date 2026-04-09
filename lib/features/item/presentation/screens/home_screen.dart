@@ -82,23 +82,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  Future<void> _pickImageFromCamera() async {
-    final status = await Permission.camera.request();
-    if (!status.isGranted) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('需要相机权限')),
-        );
-      }
-      return;
-    }
-
-    final XFile? image = await _imagePicker.pickImage(source: ImageSource.camera);
-    if (image != null && mounted) {
-      context.go('/identify', extra: image.path);
-    }
-  }
-
   Future<void> _pickImageFromGallery() async {
     final status = await Permission.photos.request();
     if (!status.isGranted) {
@@ -135,31 +118,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Action buttons
-            Row(
-              children: [
-                Expanded(
-                  child: FilledButton.icon(
-                    onPressed: _pickImageFromCamera,
-                    icon: const Icon(Icons.camera_alt),
-                    label: const Text('拍照识别'),
-                    style: FilledButton.styleFrom(
-                      padding: const EdgeInsets.all(16),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: FilledButton.icon(
-                    onPressed: _pickImageFromGallery,
-                    icon: const Icon(Icons.photo_library),
-                    label: const Text('相册选择'),
-                    style: FilledButton.styleFrom(
-                      padding: const EdgeInsets.all(16),
-                    ),
-                  ),
-                ),
-              ],
+            // Action button
+            FilledButton.icon(
+              onPressed: _pickImageFromGallery,
+              icon: const Icon(Icons.photo_library),
+              label: const Text('从相册选择图片识别'),
+              style: FilledButton.styleFrom(
+                padding: const EdgeInsets.all(20),
+              ),
             ),
 
             const SizedBox(height: 32),
@@ -203,6 +169,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                   color: Colors.grey,
                                 ),
                               ),
+                              SizedBox(height: 8),
+                              Text('点击上方按钮添加物品'),
                             ],
                           ),
                         )

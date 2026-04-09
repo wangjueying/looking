@@ -7,8 +7,7 @@ plugins {
 
 android {
     namespace = "com.itemtracker.looking_2"
-    compileSdk = 34
-    ndkVersion = "25.1.8937393"
+    compileSdk = 36
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -22,7 +21,7 @@ android {
     defaultConfig {
         applicationId = "com.itemtracker.looking_2"
         minSdk = flutter.minSdkVersion
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0.0"
     }
